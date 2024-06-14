@@ -1,0 +1,1 @@
+open("Names.txt","r")

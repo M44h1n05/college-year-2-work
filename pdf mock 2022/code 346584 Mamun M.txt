@@ -1,0 +1,190 @@
+#creates an empty list called customerdetails
+CustomerDetails = []
+#creates an empty list called lawndetails
+LawnDetails = []
+#creates a list called quality and assignes 9 values to it
+Quality = [
+["1 = luxury", 1.15],
+["2 = standard", 0.80],
+["3 = economy", 0.45],
+]
+
+#prints out a message #customer details
+print("--- customer details---")
+#variable name is created with an input for user to enter
+name = input("Enter your name: ")
+#variable length is created which checks the length of characters in varaible name
+length = len(name)
+#variable called name_count is assigned by length
+name_count = length
+#while loop will run until name_count is more than 1 so user must enter a name
+while name_count < 1:
+#variable name is created with an input for user to enter
+name = input("Enter your name : ")
+#variable length is created which checks the length of characters in varaible nam
+length = len(name)
+#variable called name_count is assigned by length
+name_count = length
+
+#variable address is created with an input for user to enter
+address = input("Enter your address: ")
+#variable length2 is created which checks the length of characters in varaible address
+length2 = len(address)
+#variable called address_count is assigned by length2
+address_count = length2
+#while loop will run until address_count is more than 1 so user must enter an address
+while address_count < 1:
+#variable address is created with an input for user to enter
+address = input("Enter your address: ")
+#variable length2 is created which checks the length of characters in varaible address
+length2 = len(address)
+#variable called address_count is assigned by length2
+address_count = length2
+#while loop is name and will run until address_count is more than 1 so user must enter an address
+
+#variable number is created with an input for user to enter
+number = input("Enter your phone number: ")
+#variable length3 is created which checks the length of characters in varaible number
+length3 = len(number)
+#variable called address_count is assigned by length3
+number_count = length3
+#while loop will run until number_count is more than 1 so user must enter thier number
+while number_count < 1:
+#variable number is created with an input for user to enter
+number = input("Enter your phone number: ")
+#variable length3 is created which checks the length of characters in varaible number
+length3 = len(number)
+#variable called number_count is assigned by length3
+number_count = length3
+# if loop is created and will run if variable number is a string value
+if number == str():
+#variable number is created with an input for user to enter
+number = input("Enter your phone number : ")
+#variable length3 is created which checks the length of characters in varaible number
+length3 = len(number)
+#variable called address_count is assigned by length3
+number_count = length3
+
+#value assigned to varaible name is now added to CustomerDetails list
+CustomerDetails.append(name)
+#value assigned to varaible address is now added to CustomerDetails list
+CustomerDetails.append(address)
+#value assigned to varaible number is now added to CustomerDetails list
+CustomerDetails.append(number)
+
+#prints out list which is assined by user in earlier inputs
+print("Customer details:", CustomerDetails)
+
+#prints a message called surface details
+print("\n--- surface details---")
+#creates a interger value variable which is assined by user
+width = int(input("Enter the width of your lawn number: "))
+#creates a interger value variable which is assined by user
+length = int(input("Enter the length of your lawn number: "))
+
+#creates a while loop and will run if value of variable width is not in the range of 2 and 30
+while width < 2 or width > 30:
+#prints out a message reminding user to enter in the range of 2 and 30
+print("width must be between 2 and 30")
+#creates a interger value variable called width which is assined by user
+width = int(input("Enter the width of your lawn number: "))
+
+#creates a while loop and will run if value of variable length is not in the range of 2 and 50
+while length < 2 or length > 50:
+#prints out a message reminding user to enter in the range of 2 and 50
+print("length must be between 2 and 50")
+#creats a interger value variable called length which is assined by user
+length = int(input("Enter the length of your lawn number: "))
+
+#value assigned to varaible width is now added to LawnDetails list
+LawnDetails.append(width)
+#value assigned to varaible length is now added to LawnDetails list
+LawnDetails.append(length)
+
+#prints out values assinged in list lawndetails
+print("Lawn details:", LawnDetails)
+
+#prints out a message saying quality details
+print("\n --- quality details---")
+# creates a for loop to run item in variable pre assigned list quality
+for item in Quality:
+# prints out the first item in list then gives a space then does second and gives a space
+print(item[0], " " * (6 - len(item[0])), ":", item[1], " " * (6 - len(item[0])))
+
+#variable quality_price is created and assigned with value 0
+quality_price = 0
+
+#varaible called quality_choice is made and allows user to enter an integer value
+quality_choice = int(input("please choose an appropriate number from the list above:"))
+
+#if user has assigned the integer value 1 to varaible quality_choice then
+if quality_choice == 1:
+#will print the amount per square metre
+print("per square metre cost £1.15")
+#varaible quality_price is now reassigned with the value 1.15
+quality_price = 1.15
+#variable choice is assigned string value "luxury"
+choice = "luxury"
+#else if user has assigned the integer value 2 to varaible quality_choice then
+elif quality_choice == 2:
+#will print the amount per square metre
+print("per square metre cost £0.80")
+#varaible quality_price is now reassigned with the value 0.8
+quality_price = 0.8
+#variable choice is assigned string value "standard"
+choice = "standard"
+#else if user has assigned the integer value 3 to varaible quality_choice then
+elif quality_choice == 3:
+#will print the amount per square metre
+print("per square metre cost £0.45")
+#varaible quality_price is now reassigned with the value 0.45
+quality_price = 0.45
+#variable choice is assigned string value "economy"
+choice = "economy"
+# if user entered another value other than 1 2 or 3 then
+else:
+#output a message saying retry
+print("retry")
+#varaible called quality_choice allows user to reassign and enter an integer value
+quality_choice = int(input("please choose an appropriate number from the list above:"))
+print("enter : 1 , 2 or 3")
+
+#outputs a message saying price details
+print("\n --- price details---")
+#displays uers quality price
+print(quality_price, "is the price per square metre")
+
+#variable called square is created and is assinged to the value of varaible length times width
+square = length * width
+#prints a message which tells user how much there area they have in square metres
+print("your lawn in square metres is ",square,)
+
+#creates a varaible called labour and assigns 0.5
+labour = 0.5
+#creates variable called labourtotal which is varaiable square times labour
+labourtotal = square * labour
+#displays the labour total
+print("labour charge for total surface is ", labourtotal)
+
+#varaible square_total_charge is variable square times quality_price
+square_total_charge = square * quality_price
+#outputs total for square metres then the quality choice then the amount for the area
+print("total amount for", square, "m is", choice, "is", square_total_charge)
+
+#varable subtotal is created and assigned value of varable square_total_charge times labourtotal
+subtotal = square_total_charge + labourtotal
+#outputs subtotal
+print("sub total is ", subtotal)
+
+#variable called vat is assined at 0.2 (=) 20%
+vat = 20 / 100
+#varaible vat charge is assigned value of subtotal times vat
+vatcharge = subtotal * vat
+
+#displayes varible vatcharge
+print(vatcharge, "is ur VAT charge")
+
+#total is made by subtotal + vatcharge
+total = subtotal + vatcharge
+#outputs total
+print("total charge with VAT is", total)
